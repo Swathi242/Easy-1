@@ -1,0 +1,20 @@
+
+public class LastWordLength {
+    public static void main(String[] args) {
+        String s = "Hello World";
+        
+        int lengthOfLastWord = findLengthOfLastWord(s);
+        
+        System.out.println("Length of the last word: " + lengthOfLastWord);
+    }
+
+    private static int findLengthOfLastWord(String s) {
+        s = s.trim();
+        int lastSpaceIndex = s.lastIndexOf(' ');
+
+        
+        int lengthOfLastWord = s.length() - lastSpaceIndex - 1;
+
+        return lengthOfLastWord;
+    }
+}
